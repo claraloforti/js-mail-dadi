@@ -7,10 +7,12 @@ const email = prompt("Inserisci la tua email");
 let presente = false;
 let messaggio = ("Mi dispiace, la tua email non è presente nella lista degli invitati!");
 
+// Cerco tra le email finchè non trovo una corrispondenza
+// Se l'email inserita dall'utente è presente, allora il messaggio cambierà
 for (let i = 0; i < guestsEmail.length && !presente; i++) {
     if (email === guestsEmail[i]) {
         presente = true;
-        messaggio = ("Ottimo! La tua email risulta nella lista degli invitati!");
+        messaggio = ("La tua email risulta nella lista degli invitati!");
     }
 }
 
