@@ -10,7 +10,9 @@ let messaggio = ("Mi dispiace, la tua email non è presente nella lista degli in
 for (let i = 0; i < guestsEmail.length && !presente; i++) {
     if (email === guestsEmail[i]) {
         presente = true;
-        messaggio = ("La tua email risulta nella lista degli invitati!");
+        messaggio = ("Ottimo! La tua email risulta nella lista degli invitati!");
     }
 }
-console.log(messaggio);
+
+document.getElementById("result").textContent = messaggio;
+
